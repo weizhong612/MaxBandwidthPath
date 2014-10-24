@@ -1,0 +1,23 @@
+Copyright: 
+Weizhong Chen
+Electrical and Computer Engineering Department
+Texas A&M University
+
+To run the code:
+1. compile: make
+2. run: ./a.out
+
+To read the output:
+By default, 6 groups tested, 
+for each group, 5 pairs of graphs(dense/sparse) tested,
+for each graph, 5 pairs of vertices(source/destination) tested.
+Groups are separated by two lines of '--------',
+graphs are separated by one line of '--------',
+and the 6 bandwidth outputs are:
+pure Dijkstra on dense graph,
+pure Dijkstra on sparse graph,
+heap-based Dijkstra on dense graph,
+heap-based Dijkstra on sparse graph,
+Kruskal on dense graph,
+Kruskal on sparse graph.
+At the end, the general statistic data will be reported.
