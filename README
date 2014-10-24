@@ -8,9 +8,9 @@ To run the code:
 2. run: ./a.out
 
 To read the output:
-By default, 6 groups tested, 
-for each group, 5 pairs of graphs(dense/sparse) tested,
-for each graph, 5 pairs of vertices(source/destination) tested.
+By default, 6 groups tested (can be changed by changing #define TOTAL_GROUP(Line 18, main.cpp)), 
+for each group, 5 pairs of graphs(dense/sparse) tested (can be changed by changing #define GRAPH_TESTED(Line 16, main.cpp)),
+for each graph, 5 pairs of vertices(source/destination) tested (can be changed by changing #define VX_TESTED(Line 17, main.cpp)).
 Groups are separated by two lines of '--------',
 graphs are separated by one line of '--------',
 and the 6 bandwidth outputs are:
