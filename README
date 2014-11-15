@@ -5,7 +5,7 @@ Texas A&M University
 
 To run the code:
 1. compile: make
-2. run: ./a.out
+2. run: ./mbp.out
 
 To read the output:
 By default, 6 groups tested (can be changed by changing #define TOTAL_GROUP(Line 18, main.cpp)), 

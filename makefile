@@ -2,7 +2,7 @@ COMPILER = g++
 OPT = -std=c++11
 all: mbp
 mbp: main.o Algorithm.o Graph.o DataStructure.o
-	$(COMPILER) $(OPT) main.o Algorithm.o Graph.o DataStructure.o
+	$(COMPILER) $(OPT) main.o Algorithm.o Graph.o DataStructure.o -o mbp
 main.o: main.cpp DataStructure.h Heap.h Graph.h Algorithm.h
 	$(COMPILER) $(OPT) main.cpp -c
 Algorithm.o: Algorithm.h Graph.h Utils.h
