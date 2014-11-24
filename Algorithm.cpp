@@ -138,8 +138,7 @@ Path dijkstra_pure(Graph* G, int src_index, int dst_index) {
                 f_tail = f_tail->next;
                 bw[v_iter->vertex_index] = min(bw[max_index], v_iter->bandwidth);
                 dad[v_iter->vertex_index] = max_index;
-            }
-            else if (state[v_iter->vertex_index] == fringe &&
+            } else if (state[v_iter->vertex_index] == fringe &&
                      bw[v_iter->vertex_index] < min(bw[max_index], v_iter->bandwidth)) {
                 bw[v_iter->vertex_index] = min(bw[max_index], v_iter->bandwidth);
                 //edit the fringe on the list
@@ -229,8 +228,7 @@ Path dijkstra_heap(Graph* G, int src_index, int dst_index) {
                 VexType new_fringe(v_iter->vertex_index, bw[v_iter->vertex_index]);
                 fringes.insert(new_fringe, h_index);
                 dad[v_iter->vertex_index] = max_index;
-            }
-            else if (state[v_iter->vertex_index] == fringe &&
+            } else if (state[v_iter->vertex_index] == fringe &&
                      bw[v_iter->vertex_index] < min(bw[max_index], v_iter->bandwidth)) {
                 //edit the fringe on the heap
                 VexType old_fringe(v_iter->vertex_index, bw[v_iter->vertex_index]);
@@ -286,11 +284,9 @@ int Find(std::vector<int>& dad, std::vector<int>& rank, int vertex_index) {
 void Union(std::vector<int>& rank, std::vector<int>& dad, int root1, int root2) {
     if (rank[root1] < rank[root2]) {
         dad[root1] = root2;
-    }
-    else if (rank[root1] > rank[root2]) {
+    } else if (rank[root1] > rank[root2]) {
         dad[root2] = root1;
-    }
-    else if (rank[root1] == rank[root2]) {
+    } else if (rank[root1] == rank[root2]) {
         dad[root2] = root1;
         rank[root1]++;
     }
@@ -390,8 +386,7 @@ Path kruskal(Graph* G, int src_index, int dst_index) {
         q.pop();
         if (tmp_vx_index == dst_index) {   //find the destination node
             break;
-        }
-        else {
+        } else {
             VexNode* v_iter = mst.vexnode[tmp_vx_index].next;
             while (v_iter != nullptr) {
                 if (visited[v_iter->vertex_index] == false) {

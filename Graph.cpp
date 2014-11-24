@@ -28,8 +28,7 @@ Graph::Graph(int degree, double percent_edge) {
     //check the constructor argument
     if ((!degree && !percent_edge) || (degree && percent_edge)) {   //only one can be nonzero
         return;
-    }
-    else if (degree) {   //construct the graph according to given degree
+    } else if (degree) {   //construct the graph according to given degree
         int i;
         int available_vex[MAXVEX];
         VexNode* v_tail[MAXVEX];
@@ -82,8 +81,7 @@ Graph::Graph(int degree, double percent_edge) {
             v_tail[joint_vx]->next = vx1;
             v_tail[joint_vx] = vx1;
         }
-    }
-    else if (percent_edge) {   //construct the graph according to given percentage of edge
+    } else if (percent_edge) {   //construct the graph according to given percentage of edge
         int i;
         VexNode* v_tail[MAXVEX];
         for (i = 0; i < MAXVEX; ++i) {
@@ -114,8 +112,7 @@ Graph::~Graph() {
                 VexNode* v_it_next = v_it->next;
                 delete v_it;
                 v_it = v_it_next;
-            }
-            else {
+            } else {
                 delete v_it;
                 v_it = nullptr;
             }

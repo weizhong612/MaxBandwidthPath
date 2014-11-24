@@ -82,16 +82,14 @@ void Heap<Type>::remove(long x_index, long* map) {
                 break;
             }
         }
-    }
-    else if ((x_index * 2 + 1 < element.size() && element[x_index] < element[x_index*2+1]) ||
+    } else if ((x_index * 2 + 1 < element.size() && element[x_index] < element[x_index*2+1]) ||
              (x_index * 2 + 2 < element.size() && element[x_index] < element[x_index*2+2])) {
         //the bandwidth of invalid element is 0, therefore this case excludes that i is the leaf node
         for (long j = x_index; j * 2 + 1 < element.size(); ) {
             Type larger;
             if (j * 2 + 2 < element.size()) {
                 larger = element[j*2+1] > element[j*2+2] ? element[j*2+1] : element[j*2+2];
-            }
-            else {
+            } else {
                 larger = element[j*2+1];
             }
             if (element[j] < larger) {   //swap this element with the larger one
@@ -110,8 +108,7 @@ void Heap<Type>::remove(long x_index, long* map) {
                     }
                     j = j * 2 + 2;
                 }
-            }
-            else {
+            } else {
                 break;
             }
         }

@@ -20,20 +20,16 @@ void mySwap(T& x, T& y) {
 }
 
 template <typename T>
-inline T min(T& x, T& y) {
-    return x < y ? x : y;
-}
+inline T min(T& x, T& y) { return x < y ? x : y; }
 
 struct compare {
     bool operator()(EdgeType& a, EdgeType& b) const {
-        if (a > b)
-            return true;
-        else
-            return false;
+        if (a > b) return true;
+        else return false;
     }
 };
 
-inline int get_key(VexType v) {return v.vertex_index;}
-inline int get_key(EdgeType e) {return e.vex2_index;}
+inline int get_key(VexType v) { return v.vertex_index; }
+inline int get_key(EdgeType e) { return e.vex2_index; }
 
 #endif
